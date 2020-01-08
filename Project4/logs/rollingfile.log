@@ -1,0 +1,12 @@
+[TRACE] 2020-01-08 07:05:27.722 [main] TestDriver - hello
+[DEBUG] 2020-01-08 07:05:27.838 [main] ConnectionUtil - jdbc:oracle:thin:@demos-1909.ckgbgyuehmou.us-east-2.rds.amazonaws.com:1521:orcl
+[DEBUG] 2020-01-08 07:05:27.839 [main] ConnectionUtil - project4
+[DEBUG] 2020-01-08 07:05:27.839 [main] ConnectionUtil - p4ssw0rd
+[DEBUG] 2020-01-08 07:05:28.687 [main] ConnectionUtil - oracle.jdbc.driver.T4CConnection@78aab498
+[TRACE] 2020-01-08 07:05:29.220 [main] TestDriver - 2
+[TRACE] 2020-01-08 07:05:48.964 [main] TestDriver - hello
+[DEBUG] 2020-01-08 07:05:48.994 [main] ConnectionUtil - jdbc:oracle:thin:@demos-1909.ckgbgyuehmou.us-east-2.rds.amazonaws.com:1521:orcl
+[DEBUG] 2020-01-08 07:05:48.998 [main] ConnectionUtil - project4
+[DEBUG] 2020-01-08 07:05:48.998 [main] ConnectionUtil - p4ssw0rd
+[DEBUG] 2020-01-08 07:05:49.813 [main] ConnectionUtil - oracle.jdbc.driver.T4CConnection@163e4e87
+[TRACE] 2020-01-08 07:05:50.354 [main] TestDriver - 0

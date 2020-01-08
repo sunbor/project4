@@ -1,0 +1,28 @@
+Configuration:
+  Properties:
+    Property:
+      name: LOGS_PATH
+      value: 'logs'
+  Appenders:
+    Console:
+      PatternLayout:
+        pattern: '[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n'
+      name: Console
+      target: SYSTEM_OUT
+    RollingFile:
+      - name: RollingFile
+        fileName: ${LOGS_PATH}/rollingfile.log
+        filePattern: "logs/archive/rollingfile.log.%d{yyyy-MM-dd-hh-mm}.gz"
+        PatternLayout:
+          pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 1 KB
+        DefaultRollOverStrategy:
+          max: 30
+  Loggers:
+    Root:
+      AppenderRef:
+        - ref: Console
+        - ref: RollingFile
+      level: TRACE 

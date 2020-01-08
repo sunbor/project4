@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<h3>users</h3>
+<div *ngFor="let user of quizTakers">
+    <p>{{user.username}}</p>
+    <mat-checkbox [(ngModel)]="user.selected">assign quiz</mat-checkbox>
+</div>
+<h3>quizzes</h3>
+<div *ngFor="let quiz of quizzes">
+    <p>{{quiz.title}}</p>
+    <mat-checkbox [(ngModel)]="quiz.selected">assign to user</mat-checkbox>
+</div>
+<form>
+    <button type="submit" class="btn btn-success" (click)="assignQuizzes()">assign</button>
+</form>
+<h6 *ngIf="assignSuccess">quiz assignment successful</h6>

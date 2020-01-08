@@ -1,0 +1,7 @@
+<div *ngFor="let quiz of quizList">
+    <p>quiz: {{quiz.title}}</p>
+    <p>score: {{quiz.score}}</p>
+    <button type="submit" class="btn btn-success" (click)="goToQuiz(quiz.id)">take quiz</button>
+</div>
+<br>
+<a routerLink="/" class="navbar-brand text-light"> logout </a>

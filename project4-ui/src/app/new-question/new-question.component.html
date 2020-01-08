@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<form>
+    <div>
+      <label>Question</label>
+      <input type="text" name="question" [(ngModel)]="question">
+    </div>
+    <div>
+      <label>Answer 1</label>
+      <input type="text" name="answer" [(ngModel)]="answer1">
+      <!-- <input type="radio" name="correct" value="1">Correct<br> -->
+    </div>
+    <div>
+        <label>Answer 2</label>
+        <input type="text" name="answer" [(ngModel)]="answer2">
+        <!-- <input type="radio" name="correct" value="2">Correct<br> -->
+      </div>
+      <div>
+        <label>Answer 3</label>
+        <input type="text" name="answer" [(ngModel)]="answer3">
+        <!-- <input type="radio" name="correct" value="3">Correct<br> -->
+      </div>
+      <div>
+        <label>Answer 4</label>
+        <input type="text" name="answer" [(ngModel)]="answer4">
+        <!-- <input type="radio" name="correct" value="4">Correct<br> -->
+      </div>
+      <div>
+          <mat-radio-group name="correct" [(ngModel)]="correctAnswer">
+              <mat-radio-button name="correct" *ngFor="let answer of answers" [value]="answer" >{{answer}}</mat-radio-button>
+          </mat-radio-group>
+          <p>{{correctAnswer}}</p>
+      </div>
+    <button type="submit" class="btn btn-success" (click)="sendQuestion()">Submit</button>
+  </form>
+  <h6 *ngIf="currentQId">{{currentQId}}</h6>

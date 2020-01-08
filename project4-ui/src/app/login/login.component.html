@@ -1,0 +1,15 @@
+<h1>login</h1>
+<form>
+    <div>
+      <label>Username</label>
+      <input type="text" name="username" [(ngModel)]="username">
+    </div>
+    <div>
+      <label>Password</label>
+      <input type="text" name="password" [(ngModel)]="password">
+    </div>
+    <button type="submit" class="btn btn-success" (click)="sendLogin()">Log In</button>
+  </form>
+<h4 *ngIf="!loginSuccess">login failed</h4>
+<h4>{{loginSuccess}}</h4>
+<!-- <h6 *ngIf="currentUser$ | async">{{(currentUser$ | async).username}}</h6> -->

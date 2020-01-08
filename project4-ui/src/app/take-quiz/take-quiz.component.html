@@ -1,0 +1,15 @@
+<p>quiz number: {{currentQuiz}}</p>
+<div *ngFor="let question of questions; let i = index">
+    <h4>{{i}} {{question.question}} </h4>
+    <mat-radio-group name="{{question.id}}" [(ngModel)]="answers[i]">
+    <!-- <div *ngFor="let answer of question.answerList"> -->
+        <!-- <li>{{answer.answer}}</li> -->
+        <mat-radio-button *ngFor="let answer of question.answerList" name="question.id" [value]="answer.id">{{answer.answer}}</mat-radio-button>
+    <!-- </div> -->
+<!-- </div> -->
+<!-- <mat-radio-group name="correct" [(ngModel)]="correctAnswer">
+    <mat-radio-button name="correct" *ngFor="let answer of answers" [value]="answer" >{{answer}}</mat-radio-button>
+</mat-radio-group> -->
+</mat-radio-group>
+</div>
+<button type="submit" class="btn btn-success" (click)="sendAnswers()">Submit</button>

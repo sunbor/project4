@@ -1,0 +1,17 @@
+<app-navbar [user]="currentUser$ | async" ></app-navbar>
+<div *ngFor="let question of questions">
+    <h4>{{question.question}}</h4>
+    <mat-checkbox [(ngModel)]="question.inQuiz">add to quiz</mat-checkbox>
+    <div *ngFor="let answer of question.answerList">
+        <li>{{answer.answer}}</li>
+        <li *ngIf="answer.correct===1">^^correct</li>
+    </div>
+</div>
+<form>
+    <div>
+      <label>quiz name</label>
+      <input type="text" name="quizName" [(ngModel)]="quizName">
+    </div>
+    <button type="submit" class="btn btn-success" (click)="sendQuiz()">new quiz</button>
+  </form>
+<h6 *ngIf="quizSuccess">quiz creation successful</h6>
